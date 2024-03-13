@@ -1,7 +1,10 @@
 import useAvatar from "./js/avatar";
 import setupMobileMenu from "./js/mobile-menu";
 import setupTheme from "./js/theme";
-import fetchUser from "./js/user";
+import { fetchRepo, fetchUser } from "./js/github";
+import useProjects from "./js/projects";
+
+const name = "samuelmevik";
 
 setupMobileMenu(
   document.querySelector<HTMLButtonElement>("#mobile-toggler")!,
@@ -10,6 +13,10 @@ setupMobileMenu(
 
 setupTheme(document.querySelector<HTMLButtonElement>("#theme-toggler")!);
 
-const user = await fetchUser("samuelmevik");
+const user = await fetchUser(name);
 
 useAvatar(document.querySelector<HTMLImageElement>("#avatar")!, user);
+
+const repos = await fetchRepo(name);
+
+useProjects(document.querySelector<HTMLUListElement>("#projects")!, repos);
