@@ -10,6 +10,92 @@
   <body
     class="break-words bg-orange-50 leading-6 text-zinc-900 transition-colors duration-500 dark:bg-zinc-900 dark:text-zinc-300"
   >
-    <p class="text-5xl">Hej</p>
+    <header class="fixed z-50 h-14 w-full p-2 backdrop-blur-md">
+      <div class="mx-auto max-w-3xl">
+        <nav class="z-50 flex items-center gap-3 text-base">
+          <a href="#">
+            <h1 class="min-w-32 text-pretty p-2 font-semibold tracking-tighter">
+              Samuel Mevik
+            </h1>
+          </a>
+          <div class="hidden items-center gap-6 md:flex">
+            <a
+              href="https://github.com/samuelmevik"
+              class="inline-flex items-center hover:underline"
+            >
+              <img
+                src="github-mark.svg"
+                alt="github-logo"
+                class="h-4 w-4 rounded-full border border-zinc-900 bg-zinc-900"
+              />
+              <h2 class="p-2 font-semibold tracking-tighter">Projects</h2>
+            </a>
+          </div>
+
+          <div class="mx-auto"></div>
+
+          <div
+            class="min-w-fit rounded-md bg-orange-300 p-1.5 transition-colors duration-500 hover:bg-orange-400 dark:bg-zinc-300 dark:hover:bg-zinc-400"
+          >
+            <div class="flex h-5 w-5 items-center justify-center">
+              <button
+                id="theme-toggler"
+                type="button"
+                aria-label="toggle theme"
+              >
+                <img
+                  src="sun-fog-svgrepo.svg"
+                  alt="☀️"
+                  class="block aspect-square dark:hidden"
+                />
+                <img
+                  src="moon-fog-svgrepo.svg"
+                  alt="🌑"
+                  class="hidden dark:block"
+                />
+              </button>
+            </div>
+          </div>
+
+          <!--Mobile Menu-->
+          <div class="relative inline-block text-left md:hidden">
+            <button
+              id="mobile-toggler"
+              type="button"
+              class="inline-flex justify-center rounded-md border border-zinc-700 px-2 py-2 text-sm font-medium shadow-sm transition-all duration-500 hover:bg-primary-light dark:bg-zinc-300 dark:hover:bg-zinc-400"
+              aria-label="menu"
+            >
+              <img
+                src="hamburger-menu.svg"
+                alt="menu"
+                class="h-5 min-h-5 w-5 min-w-5"
+              />
+            </button>
+            <div
+              id="mobile-menu"
+              class="absolute right-0 hidden origin-top-right pt-1"
+            >
+              <div
+                class="overflow-hidden rounded-md bg-zinc-900 text-zinc-300 shadow-lg ring-1 ring-black ring-opacity-10 dark:bg-zinc-300 dark:text-zinc-900"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="mobile-menu-button"
+              >
+                <a
+                  href="https://github.com/samuelmevik"
+                  class="block px-4 py-2 text-base hover:bg-zinc-800 dark:hover:bg-zinc-400"
+                  role="menuitem"
+                  >Projects</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--End Of Mobile Menu-->
+        </nav>
+      </div>
+    </header>
+
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
