@@ -1,4 +1,4 @@
-import { UserJSON } from "./user";
+import { UserJSON } from "./github";
 
 function useAvatar(element: HTMLImageElement, user: UserJSON) {
   element.src = user.avatar_url;
