@@ -3,7 +3,7 @@ function setupMobileMenu(button: HTMLButtonElement, menu: HTMLElement) {
     menu.classList.toggle("hidden");
   });
 
-  document.body.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
     if (menu.classList.contains("hidden")) {
       return;
     }
