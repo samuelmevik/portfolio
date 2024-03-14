@@ -4,5 +4,5 @@ export default defineConfig({
   build: {
     target: "esnext",
   },
-  base: "https://samuelmevik.github.io/me/",
+  base: "https://www.samuelmevik.com/",
 });
