@@ -7,10 +7,10 @@ function setupMobileMenu(button: HTMLButtonElement, menu: HTMLElement) {
     if (menu.classList.contains("hidden")) {
       return;
     }
-
-    if (event.target !== button && !menu.contains(event.target as Node)) {
-      menu.classList.add("hidden");
+    if (event.target === button || button.contains(event.target as Node)) {
+      return;
     }
+    menu.classList.add("hidden");
   });
 }
 
