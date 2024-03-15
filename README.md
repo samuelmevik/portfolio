@@ -1,6 +1,6 @@
 # Hello!
 
-This is my personal website, I hope you find it your liking.
+This is my personal website, I hope you find it to your liking.
 
 ## Running Localy
 
