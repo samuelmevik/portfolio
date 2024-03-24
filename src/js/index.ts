@@ -1,5 +1,5 @@
-import setupMobileMenu from "./js/mobile-menu";
-import setupTheme from "./js/theme";
+import setupMobileMenu from "./mobile-menu";
+import setupTheme from "./theme";
 
 setupMobileMenu(
   document.querySelector<HTMLButtonElement>("#mobile-toggler")!,
