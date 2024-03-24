@@ -114,10 +114,11 @@
     <main class="z-0 pt-14">
       <article class="mx-auto flex max-w-3xl flex-col gap-5 px-4">
         <div>
-          <div class="flex flex-col items-center gap-3">
+          <div class="relative flex flex-col items-center gap-3">
             <img
-              id="avatar"
-              class="aspect-square h-52 w-52 rounded-full border-2 border-zinc-900 text-center transition-colors duration-500 dark:border-zinc-300"
+              src="avatar.jpg"
+              fetchpriority="high"
+              class="aspect-square h-52 min-w-52 rounded-full border-2 border-zinc-900 text-center transition-colors duration-500 dark:border-zinc-300"
               alt="Avatar"
             />
             <div>
@@ -274,8 +275,36 @@
         <section>
           <h2 class="text-2xl underline">My Projects</h2>
           <br />
-          <ul id="projects" class="grid min-h-72 gap-6 sm:grid-cols-2">
-            <!--Display github projects-->
+          <ul class="grid min-h-72 gap-6 sm:grid-cols-2">
+            <li
+              class="flex flex-col justify-between rounded-md border-2 border-zinc-900 p-5 dark:border-zinc-300"
+            >
+              <div class="flex flex-col items-center">
+                <h3 class="text-xl underline">portfolio</h3>
+                <p class="text-sm">My personal website</p>
+              </div>
+
+              <a
+                href="https://github.com/samuelmevik/portfolio"
+                class="self-end text-primary transition-colors duration-500 hover:text-primary-dark"
+                >Link to repository
+              </a>
+            </li>
+
+            <li
+              class="flex flex-col justify-between rounded-md border-2 border-zinc-900 p-5 dark:border-zinc-300"
+            >
+              <div class="flex flex-col items-center">
+                <h3 class="text-xl underline">sorting-visualizer</h3>
+                <p class="text-sm">Sorting visualizer for various algorithms</p>
+              </div>
+
+              <a
+                href="https://github.com/samuelmevik/sorting-visualizer"
+                class="self-end text-primary transition-colors duration-500 hover:text-primary-dark"
+                >Link to repository
+              </a>
+            </li>
           </ul>
         </section>
       </article>
