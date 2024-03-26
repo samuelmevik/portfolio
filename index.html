@@ -113,24 +113,33 @@
 
     <main class="z-0 pt-14">
       <article class="mx-auto flex max-w-3xl flex-col gap-5 px-4">
-        <div>
-          <div class="relative flex flex-col items-center gap-3">
-            <img
-              src="avatar.jpg"
-              fetchpriority="high"
-              class="aspect-square h-52 min-w-52 rounded-full border-2 border-zinc-900 text-center transition-colors duration-500 dark:border-zinc-300"
-              alt="Avatar"
-            />
-            <div>
-              <h2 class="text-3xl underline sm:text-4xl md:text-5xl">
-                Samuel Mevik
-              </h2>
+        <se class="card relative">
+          <img
+            src="profile-aspect-square.webp"
+            alt="Avatar of me"
+            class="aspect-square h-96 w-full object-cover object-top sm:hidden"
+          />
+          <img
+            src="profile-aspect-video.webp"
+            alt="Avatar of me"
+            class="hidden aspect-video h-96 w-full object-cover object-left sm:block"
+          />
+          <div
+            class="absolute left-0 right-0 flex flex-col items-center gap-3 transition-all delay-0 duration-300 ease-in-out sm:-translate-y-24"
+          >
+            <div
+              class="rounded-md py-2 backdrop-blur-3xl sm:px-5 sm:text-zinc-300"
+            >
+              <h2 class="text-2xl underline sm:text-5xl">Samuel Mevik</h2>
               <p class="text-center">Fullstack Developer</p>
             </div>
           </div>
-        </div>
+          <div
+            class="h-12 transition-all delay-0 duration-300 ease-in-out sm:h-0"
+          ></div>
+        </se>
 
-        <section>
+        <section class="card">
           <h3 class="text-2xl underline">Bio</h3>
           <p class="indent-4">
             Hi, I'm a software developer from Kalmar. Presently, I'm enhancing
@@ -148,7 +157,7 @@
           </p>
         </section>
 
-        <section>
+        <section class="card">
           <h2 class="text-2xl underline">My technologies</h2>
           <p>
             If I were to evaluate my experience with the technologies I use, I
@@ -241,7 +250,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="card">
           <h2 class="text-2xl underline">Socials</h2>
           <p>You can find me on the following platforms:</p>
           <div class="flex w-fit flex-col justify-center gap-1 sm:pl-20">
@@ -272,7 +281,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="card">
           <h2 class="text-2xl underline">My Projects</h2>
           <br />
           <ul class="grid min-h-72 gap-6 sm:grid-cols-2">
