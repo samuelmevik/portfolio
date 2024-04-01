@@ -4,7 +4,7 @@ import setupTheme from "./theme";
 
 setupMobileMenu(
   document.querySelector<HTMLButtonElement>("#mobile-toggler")!,
-  document.querySelector<HTMLDivElement>("#mobile-menu")!,
+  document.querySelector<HTMLDivElement>("header")!,
 );
 
 setupTheme(document.querySelector<HTMLButtonElement>("#theme-toggler")!);

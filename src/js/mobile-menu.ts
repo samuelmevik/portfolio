@@ -1,17 +1,12 @@
-function setupMobileMenu(button: HTMLButtonElement, menu: HTMLElement) {
-  button.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-
-  document.addEventListener("click", (event) => {
-    if (menu.classList.contains("hidden")) {
-      return;
-    }
-    if (event.target === button || button.contains(event.target as Node)) {
-      return;
-    }
-    menu.classList.add("hidden");
-  });
+function setupMobileMenu(button: HTMLButtonElement, menu: HTMLDivElement) {
+  try {
+    button.addEventListener("click", () => {
+      menu.classList.toggle("showing");
+      document.body.classList.toggle("overflow-y-hidden");
+    });
+  } catch (error) {
+    console.error("Mobile menu error:", error);
+  }
 }
 
 export default setupMobileMenu;

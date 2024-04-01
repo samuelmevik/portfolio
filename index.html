@@ -23,91 +23,72 @@
     />
   </head>
   <body
-    class="break-words bg-orange-50 leading-6 text-zinc-900 transition-colors duration-500 dark:bg-zinc-900 dark:text-zinc-300"
+    class="break-words bg-orange-50 leading-6 text-zinc-900 duration-500 dark:bg-zinc-900 dark:text-zinc-300"
   >
-    <header class="fixed z-50 h-14 w-full p-2 backdrop-blur-md">
-      <div class="mx-auto max-w-3xl">
-        <nav class="z-50 flex items-center gap-3 text-base">
-          <a href="#">
-            <h1 class="min-w-32 text-pretty p-2 font-semibold tracking-tighter">
-              Samuel Mevik
-            </h1>
-          </a>
-          <div class="hidden items-center gap-6 md:flex">
-            <a
-              href="https://github.com/samuelmevik"
-              class="inline-flex items-center hover:underline"
+    <header class="group fixed z-50 w-full backdrop-blur-lg">
+      <div
+        class="mx-auto h-12 max-w-3xl group-[.showing]:h-svh group-[.showing]:transition-all sm:group-[.showing]:h-12"
+      >
+        <div class="flex h-12 items-center justify-between p-2">
+          <h3 class="text-pretty p-2 font-semibold tracking-tighter">
+            Samuel Mevik
+          </h3>
+          <nav class="hidden group-[.showing]:block sm:block">
+            <div
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:static sm:transform-none"
+            >
+              <menu>
+                <li
+                  class="flex items-center gap-1 rounded-full border border-zinc-900 bg-orange-50 px-2 py-1 dark:border-zinc-300 dark:bg-zinc-900 sm:border-0 sm:bg-inherit sm:dark:bg-inherit"
+                >
+                  <img
+                    src="github-mark.svg"
+                    alt="Github"
+                    class="size-5 rounded-full border border-black bg-black"
+                  />
+                  <a
+                    href="https://github.com/samuelmevik"
+                    class="font-semibold tracking-tighter"
+                    >Projects</a
+                  >
+                </li>
+              </menu>
+            </div>
+          </nav>
+          <div class="hidden sm:block sm:flex-1"></div>
+          <menu type="toolbar" class="flex gap-2">
+            <button
+              id="theme-toggler"
+              class="size-9 rounded-full bg-orange-300 p-1 transition-colors duration-500 hover:bg-orange-400 dark:bg-zinc-300 dark:hover:bg-zinc-400"
             >
               <img
-                src="github-mark.svg"
-                alt="github-logo"
-                class="h-4 w-4 rounded-full border border-zinc-900 bg-zinc-900"
+                src="sun-fog-svgrepo.svg"
+                alt="☀️"
+                class="size-full dark:hidden"
               />
-              <h2 class="p-2 font-semibold tracking-tighter">Projects</h2>
-            </a>
-          </div>
-
-          <div class="mx-auto"></div>
-
-          <div
-            class="min-w-fit rounded-md bg-orange-300 p-1.5 transition-colors duration-500 hover:bg-orange-400 dark:bg-zinc-300 dark:hover:bg-zinc-400"
-          >
-            <div class="flex items-center justify-center">
-              <button
-                id="theme-toggler"
-                type="button"
-                aria-label="toggle theme"
-              >
-                <img
-                  src="sun-fog-svgrepo.svg"
-                  alt="☀️"
-                  class="h-5 w-5 dark:hidden"
-                />
-                <img
-                  src="moon-fog-svgrepo.svg"
-                  alt="🌑"
-                  class="hidden h-5 w-5 dark:block"
-                />
-              </button>
-            </div>
-          </div>
-
-          <!--Mobile Menu-->
-          <div class="relative inline-block text-left md:hidden">
+              <img
+                src="moon-fog-svgrepo.svg"
+                alt="🌑"
+                class="hidden size-full dark:block"
+              />
+            </button>
             <button
               id="mobile-toggler"
-              type="button"
-              class="inline-flex justify-center rounded-md border border-zinc-700 px-2 py-2 text-sm font-medium shadow-sm transition-all duration-500 hover:bg-primary-light dark:bg-zinc-300 dark:hover:bg-zinc-400"
-              aria-label="menu"
+              class="rounded-full border border-zinc-700 bg-orange-50 shadow-sm transition-all duration-500 hover:bg-zinc-100 dark:hover:bg-zinc-400 sm:hidden"
             >
+              <img
+                src="cross-svgrepo.svg"
+                alt="menu"
+                class="hidden size-9 p-1 group-[.showing]:block"
+              />
               <img
                 src="hamburger-menu.svg"
                 alt="menu"
-                class="h-5 min-h-5 w-5 min-w-5"
+                class="size-9 p-1 group-[.showing]:hidden"
               />
             </button>
-            <div
-              id="mobile-menu"
-              class="absolute right-0 hidden origin-top-right pt-1"
-            >
-              <div
-                class="overflow-hidden rounded-md bg-zinc-900 text-zinc-300 shadow-lg ring-1 ring-black ring-opacity-10 dark:bg-zinc-300 dark:text-zinc-900"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="mobile-menu-button"
-              >
-                <a
-                  href="https://github.com/samuelmevik"
-                  class="block px-4 py-2 text-base hover:bg-zinc-800 dark:hover:bg-zinc-400"
-                  role="menuitem"
-                  >Projects</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--End Of Mobile Menu-->
-        </nav>
+          </menu>
+        </div>
       </div>
     </header>
 
@@ -117,15 +98,15 @@
           <img
             src="profile-aspect-square.webp"
             alt="Avatar of me"
-            class="aspect-square h-96 w-full object-cover object-top sm:hidden"
+            class="aspect-square h-96 w-full rounded-sm object-cover object-top sm:hidden"
           />
           <img
             src="profile-aspect-video.webp"
             alt="Avatar of me"
-            class="hidden aspect-video h-96 w-full object-cover object-left sm:block"
+            class="hidden aspect-video h-96 w-full rounded-sm object-cover object-left sm:block"
           />
           <div
-            class="absolute left-0 right-0 flex flex-col items-center gap-3 transition-all delay-0 duration-300 ease-in-out sm:-translate-y-24"
+            class="absolute left-0 right-0 flex flex-col items-center gap-3 sm:-translate-y-24"
           >
             <div
               class="rounded-md py-2 backdrop-blur-3xl sm:px-5 sm:text-zinc-300"
@@ -135,7 +116,7 @@
             </div>
           </div>
           <div
-            class="h-12 transition-all delay-0 duration-300 ease-in-out sm:h-0"
+            class="h-12 transition-all duration-300 ease-in-out sm:h-0"
           ></div>
         </section>
 
@@ -236,7 +217,7 @@
 
               <div class="inline-flex items-center gap-1">
                 <p>Typescript</p>
-                <img src="heart-svgrepo.svg" alt="💙" class="h-4 w-4" />
+                <img src="heart-svgrepo.svg" alt="💙" class="size-4" />
               </div>
               <div
                 class="col-span-2 my-auto h-4 overflow-hidden rounded-full bg-gray-200"
@@ -258,7 +239,7 @@
               href="https://github.com/samuelmevik"
               class="inline-flex items-center gap-2 text-primary transition-colors duration-500 hover:text-primary-dark"
             >
-              <img src="github-svgrepo.svg" alt="github-logo" class="h-4 w-4" />
+              <img src="github-svgrepo.svg" alt="github-logo" class="size-4" />
               @samuelmevik
             </a>
             <a
@@ -268,7 +249,7 @@
               <img
                 src="linkedin-svgrepo.svg"
                 alt="linkedin-logo"
-                class="h-4 w-4"
+                class="size-4"
               />
               @samuelmevik
             </a>
