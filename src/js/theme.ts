@@ -17,16 +17,20 @@ function setupTheme(element: HTMLButtonElement) {
 }
 
 function setTheme(theme: Theme) {
-  console.log("Setting theme to: " + theme);
-  switch (theme) {
-    case "light":
-      document.documentElement.classList.remove("dark");
-      break;
-    case "dark":
-      document.documentElement.classList.add("dark");
-      break;
+  try {
+    console.log("Setting theme to: " + theme);
+    switch (theme) {
+      case "light":
+        document.documentElement.classList.remove("dark");
+        break;
+      case "dark":
+        document.documentElement.classList.add("dark");
+        break;
+    }
+    localStorage.setItem("theme", theme);
+  } catch (error) {
+    console.error("Theme error:", error);
   }
-  localStorage.setItem("theme", theme);
 }
 
 export default setupTheme;

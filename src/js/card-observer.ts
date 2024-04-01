@@ -8,8 +8,12 @@ const observer = new IntersectionObserver(
 );
 
 function setupCardObserver(elements: NodeListOf<HTMLElement>) {
-  for (const element of elements) {
-    observer.observe(element);
+  try {
+    for (const element of elements) {
+      observer.observe(element);
+    }
+  } catch (error) {
+    console.error("Card observer error:", error);
   }
 }
 
